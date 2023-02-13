@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox Task1</title>
+    <style>
+      html {
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: blue;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: yellowgreen;
+      }
+
+      /* Add your flexbox CSS below here */
+
+      section {
+        display: flex;
+      }
+
+      article {
+        flex: 1 200px;
+      }
+
+      article:nth-of-type(3) {
+        flex: 3 200px;
+        display: flex;
+        flex-flow: column;
+      }
+
+      article:nth-of-type(3) div:first-child {
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      button {
+        flex: 1 auto;
+        margin: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox Task1</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>First article</h2>
+
+        <p>This is thje first article for task one of the flexbox asignment.</p>
+      </article>
+
+      <article>
+        <h2>Second article</h2>
+
+        <p>I am a senior at kean university major in computer science and i am graduating this may 2023.</p>
+      </article>
+
+      <article>
+        <div>
+          <button>Clap</button>
+          <button>Shake</button>
+          <button>Dive</button>
+          <button>Stand</button>
+          <button>Slide</button>
+        </div>
+        <div>
+            <p>I am a senior at kean university major in computer science and i am graduating this may 2023.I am a senior at kean university major in computer science and i am graduating this may 2023.I am a senior at kean university major in computer science and i am graduating this may 2023.I am a senior at kean university major in computer science and i am graduating this may 2023.</p>
+        </div>
+        <div>
+          <p>My favorite foods are chicken, rice, steak, cake, ice cream, brownies, and bacon</p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
